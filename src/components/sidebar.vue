@@ -7,7 +7,7 @@
 			</router-link>
             </div>
 		<div class="menu-toggle-wrap">
-			<button class="menu-toggle" @mouseover="ToggleMenu">
+			<button class="menu-toggle" @click="ToggleMenu">
 				<span class="material-icons bounce">keyboard_double_arrow_right</span>
 			</button>
 		</div>
@@ -65,6 +65,7 @@ const is_expanded = ref(localStorage.getItem("is_expanded") === "true")
 const ToggleMenu = () => {
     
 	is_expanded.value = !is_expanded.value
+	setTimeout(null, 1000);
 	localStorage.setItem("is_expanded", is_expanded.value)
 }
 </script>
